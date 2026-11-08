@@ -1,9 +1,9 @@
-# Price History Tracker
+# Amazon & Flipkart Price History on Telegram
 
-Free Telegram bot that shows price history for Amazon, Flipkart, Myntra, Ajio and more.
+Free Telegram bot for Amazon price history, Flipkart price history, Myntra and Ajio.
 
 - Paste a product link
-- See how the price moved
+- See the price chart and the lowest recorded price
 - Set a target
 - Get an alert when the price drops
 
@@ -11,4 +11,4 @@ Free Telegram bot that shows price history for Amazon, Flipkart, Myntra, Ajio an
 
 **Deals channel:** https://t.me/PremiumLootAlertsBot
 
-Keywords: price history, amazon price history, flipkart price history, price tracker, lowest price, price alerts, telegram bot
+Keywords: amazon price history, flipkart price history, price history telegram bot, amazon price tracker, flipkart price tracker, price drop alert, myntra price history, ajio price tracker
