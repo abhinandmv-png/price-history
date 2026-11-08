@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Price History Tracker — Amazon, Flipkart & More | Telegram Bot</title>
+  <meta name="description" content="Check price history before you buy. Free Telegram bot for Amazon, Flipkart, Myntra, Ajio and more. Set a target price and get automatic alerts when it drops." />
+  <meta name="keywords" content="price history, amazon price history, flipkart price history, price tracker, telegram price bot, lowest price, price alerts, myntra price history, ajio price tracker" />
+  <meta property="og:title" content="Price History Tracker — Don't overpay" />
+  <meta property="og:description" content="Free Telegram bot. Paste a product link, see price history, set a target, get alerts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abhinandmv-png.github.io/price-history/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://abhinandmv-png.github.io/price-history/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📉</text></svg>" />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #262626;
+      --text: #f5f5f5;
+      --muted: #a3a3a3;
+      --accent: #ffffff;
+      --accent-hover: #e5e5e5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    header .wrap { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 600; letter-spacing: -0.02em; font-size: 1.05rem; }
+    .nav a { color: var(--muted); font-size: 0.9rem; margin-left: 20px; }
+    .nav a:hover { color: var(--text); }
+    .hero { padding: 100px 0 80px; text-align: center; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero p.lead {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1rem;
+      transition: background 0.15s;
+    }
+    .cta:hover { background: var(--accent-hover); }
+    .cta-secondary {
+      display: inline-block;
+      margin-left: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 14px 8px;
+    }
+    .cta-secondary:hover { color: var(--text); }
+    section { padding: 64px 0; }
+    section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .steps { display: grid; gap: 20px; }
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+    }
+    .step strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.95rem; }
+    .features { display: grid; gap: 16px; margin-top: 12px; }
+    .feature { display: flex; gap: 14px; align-items: flex-start; }
+    .feature span { font-size: 1.3rem; line-height: 1; }
+    .feature div strong { display: block; }
+    .feature div p { color: var(--muted); font-size: 0.92rem; }
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--text); }
+    @media (max-width: 600px) {
+      .cta-secondary { display: block; margin: 16px 0 0; }
+      .hero { padding: 72px 0 60px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Price History Tracker",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Telegram",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Free Telegram bot that shows price history for Amazon, Flipkart, Myntra, Ajio and more. Set a target and get alerts."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo">Price History</div>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Don't overpay for your favourite products.</h1>
+        <p class="lead">Check price history before you buy. Set a target. Get automatic alerts when the price drops.</p>
+        <a class="cta" href="https://t.me/PremiumLootAlertsBot" target="_blank" rel="noopener">Open in Telegram</a>
+        <a class="cta-secondary" href="https://t.me/PremiumLootAlertsBot" target="_blank" rel="noopener">See lowest deals →</a>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <strong>1. Paste a product link</strong>
+            <p>Amazon, Flipkart, Myntra, Ajio or any supported store. The bot pulls the current price and history.</p>
+          </div>
+          <div class="step">
+            <strong>2. See the chart</strong>
+            <p>Compare today's price with the 30-day average and the usual price. Know if it's a good time to buy.</p>
+          </div>
+          <div class="step">
+            <strong>3. Set a target</strong>
+            <p>Tell the bot the price you want. It watches and messages you when the price reaches it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>What you get</h2>
+        <div class="features">
+          <div class="feature">
+            <span>📊</span>
+            <div>
+              <strong>Price history</strong>
+              <p>See how the price moved over weeks and months before you decide.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span>🎯</span>
+            <div>
+              <strong>Target alerts</strong>
+              <p>Set the price you want. Get a message only when it hits.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span>🔔</span>
+            <div>
+              <strong>Lowest deals channel</strong>
+              <p>When a tracked product hits its lowest recorded price, it can appear in the channel.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span>🛍️</span>
+            <div>
+              <strong>Amazon, Flipkart and more</strong>
+              <p>Works with short links too. Affiliate links are added so the bot can stay free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Free Telegram bot. <a href="https://t.me/PremiumLootAlertsBot" target="_blank" rel="noopener">Open Price History</a></p>
+      <p style="margin-top: 8px;">Amazon · Flipkart · Myntra · Ajio · price history · price tracker · lowest price alerts</p>
+    </div>
+  </footer>
+</body>
+</html>
