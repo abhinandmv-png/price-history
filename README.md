@@ -7,6 +7,8 @@ Free Telegram bot that shows price history for Amazon, Flipkart, Myntra, Ajio an
 - Set a target
 - Get an alert when the price drops
 
-**Open the bot:** https://t.me/PremiumLootAlertsBot
+**Open the bot:** https://t.me/Pricehistorybot_bot
+
+**Deals channel:** https://t.me/PremiumLootAlertsBot
 
 Keywords: price history, amazon price history, flipkart price history, price tracker, lowest price, price alerts, telegram bot
